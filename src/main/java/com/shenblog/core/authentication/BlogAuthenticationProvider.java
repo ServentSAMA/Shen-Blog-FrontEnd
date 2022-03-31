@@ -39,6 +39,11 @@ public class BlogAuthenticationProvider implements AuthenticationProvider {
         }
     }
 
+    public String test(){
+
+        return null;
+    }
+
 
     @Override
     public boolean supports(Class<?> authentication) {
