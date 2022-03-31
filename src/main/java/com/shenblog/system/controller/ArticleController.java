@@ -1,6 +1,8 @@
 package com.shenblog.system.controller;
 
-import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
 /**
  * @author ShenChuanBiao
@@ -9,6 +11,15 @@ import org.springframework.stereotype.Controller;
  * @description: TODO
  * @date 2022/3/28 13:18
  */
-@Controller
+@RestController
+@RequestMapping("/article")
 public class ArticleController {
+
+    @GetMapping("/details")
+    public String details(){
+
+        return null;
+    }
+
+
 }

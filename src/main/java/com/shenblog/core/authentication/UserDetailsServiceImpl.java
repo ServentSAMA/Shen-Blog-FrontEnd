@@ -1,8 +1,6 @@
 package com.shenblog.core.authentication;
 
-import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
-import com.baomidou.mybatisplus.extension.conditions.query.LambdaQueryChainWrapper;
 import com.google.common.collect.Lists;
 import com.shenblog.system.entity.SysRole;
 import com.shenblog.system.entity.SysUser;
@@ -46,4 +44,9 @@ public class UserDetailsServiceImpl implements UserDetailsService {
 
         }
     }
+//    @Bean
+//    public AuthenticationManager authenticationManager(){
+//        return new OAuth2AuthenticationManager();
+//    }
+
 }
