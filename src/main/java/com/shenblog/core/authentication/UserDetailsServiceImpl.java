@@ -6,7 +6,7 @@ import com.shenblog.system.entity.SysRole;
 import com.shenblog.system.entity.SysUser;
 import com.shenblog.system.service.ISysRoleService;
 import com.shenblog.system.service.ISysUserService;
-import org.springframework.beans.factory.annotation.Autowired;
+import lombok.RequiredArgsConstructor;
 import org.springframework.security.core.userdetails.User;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
@@ -21,12 +21,11 @@ import org.springframework.stereotype.Component;
  * @date 2022/3/25 18:14
  */
 @Component
+@RequiredArgsConstructor
 public class UserDetailsServiceImpl implements UserDetailsService {
 
-    @Autowired
-    private ISysUserService sysUserService;
-    @Autowired
-    private ISysRoleService sysRoleService;
+    final private ISysUserService sysUserService;
+    final private ISysRoleService sysRoleService;
 
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
@@ -44,9 +43,5 @@ public class UserDetailsServiceImpl implements UserDetailsService {
 
         }
     }
-//    @Bean
-//    public AuthenticationManager authenticationManager(){
-//        return new OAuth2AuthenticationManager();
-//    }
 
 }

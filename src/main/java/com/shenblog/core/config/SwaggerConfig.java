@@ -22,6 +22,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 /**
+ * Swagger配置类
  * @author ShenChuanBiao
  * @title: SwaggerConfig
  * @projectName system

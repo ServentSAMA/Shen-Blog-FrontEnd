@@ -6,14 +6,14 @@ server:
 
 spring:
   redis:
-    host: 127.0.0.1
-    password: ''
+    host: 121.36.54.216
+    password: Wuniutech
     port: 6379
     database: 0
     connect-timeout: 60
   datasource:
     druid:
-      url: jdbc:mysql://121.36.54.216/blog?characterEncoding=UTF-8&useUnicode=true&useSSL=false&tinyInt1isBit=false&allowPublicKeyRetrieval=true&serverTimezone=Asia/Shanghai
+      url: jdbc:mysql://121.36.54.216:3306/blog?characterEncoding=UTF-8&useUnicode=true&useSSL=false&tinyInt1isBit=false&allowPublicKeyRetrieval=true&serverTimezone=Asia/Shanghai
       username: blog
       password: ShenWenJie@2022
       driver-class-name: com.mysql.cj.jdbc.Driver
@@ -28,8 +28,3 @@ spring:
   mvc:
     pathmatch:
       matching-strategy: ant_path_matcher
-  security:
-    oauth2:
-      resourceserver:
-        jwt:
-          public-key-location: classpath:simple.pub

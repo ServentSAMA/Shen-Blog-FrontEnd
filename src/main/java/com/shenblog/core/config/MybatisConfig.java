@@ -4,6 +4,7 @@ import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.context.annotation.Configuration;
 
 /**
+ * Mybatis配置类
  * @author ShenChuanBiao
  * @title: MybatisConfig
  * @projectName system

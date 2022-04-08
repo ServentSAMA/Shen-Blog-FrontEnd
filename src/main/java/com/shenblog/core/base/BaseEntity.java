@@ -10,6 +10,8 @@ import org.springframework.format.annotation.DateTimeFormat;
 import java.util.Date;
 
 /**
+ * 公共基类
+ *
  * @author ShenChuanBiao
  * @title: BaseEntity
  * @projectName system
