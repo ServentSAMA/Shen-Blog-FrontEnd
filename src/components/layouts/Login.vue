@@ -3,10 +3,10 @@
     <div id="loginForm">
       <el-input class="login" placeholder="用户名" v-model="username"></el-input>
       <el-input class="login" placeholder="密码" show-password v-model="password"></el-input>
-      <el-button id="loginButton" v-on:click="login">登录</el-button>
+      <el-button id="loginButton" @click="login">登录</el-button>
     </div>
     <div>
-      <el-button id="logoutButton" v-on:click="logout">登出</el-button>
+      <el-button id="logoutButton" @click="logout">登出</el-button>
     </div>
   </div>
 </template>
