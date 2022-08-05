@@ -1,6 +1,6 @@
 import axios from 'axios'
 
-let baseContextPath = 'http://192.168.0.104:8088/blog'
+const baseContextPath = process.env.VUE_APP_API_BASE_URL
 
 const axiosInstance = axios.create({
   baseURL: baseContextPath,
@@ -12,5 +12,21 @@ export function httpGet (url, params) {
     url: url,
     method: 'get',
     data: params
+  })
+}
+export function httpPost (url, params) {
+  return axiosInstance({
+    url: url,
+    method: 'post',
+    data: params
+  })
+}
+export function logout (url, token) {
+  return axiosInstance({
+    url: url,
+    method: 'post',
+    headers: {
+      'Authorization': 'Bearer ' + token
+    }
   })
 }
